@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-20 Make Your Own Team</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-dark">
+    <header>
+        <!-- <img class="img-fluid rounded d-block float-start mx-5 p-5" style="max-width: 20%;" src="Images/logo.png"
+            alt=""> -->
+
+        <section class=" text-center bg-light p-5 border border-5 border-info border-start-0 border-end-0">
+
+            <h1 class="m-auto display-3 text-warning fw-bold" style="width: 70%;">Make Your Team</h1>
+
+            <P class="text-dark m-auto mt-3 fw-normal mb-5" style="width: 70%">The ICC T20 World Cup is the flagship
+                international Twenty20 tournament, organised by the International Cricket Council. The first men’s
+                competition took place in September 2007, with India winning the inaugural title. The next edition took
+                place in 2022 in Australia !</P>
+
+        </section>
+    </header>
+
+    <main class="bg-dark mx-3 mb-3">
+        <section class=" text-center mt-5 border border-dark">
+            <div class="row row-cols-3">
+                <div class="col-3 mb-5 ">
+                    <div class="card  bg-dark border border-secondary ">
+                        <img src="Images/sakib.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-light m-auto">Sakib Al Hasan</h5>
+                            <p class="card-text text-secondary m-auto">Six: 80 . Four: 95</p>
+                            <button id="button1"  class="btn bg-info buttonx" onclick="addToPlayerArray(this)" type="submit">SELECT</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card  bg-dark border border-secondary">
+                        <img src="Images/nurul.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title  text-light m-auto">Nurul Hassan</h5>
+                            <p class="card-text text-secondary m-auto">Six: 25 . Four: 85</p>
+                            <button id="button2"  class="btn bg-info buttonx"  type="submit" onclick="addToPlayerArray(this)">SELECT</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card  bg-dark border border-secondary">
+                        <img src="Images/liton.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title  text-light m-auto">Liton Kumar Das</h5>
+                            <p class="card-text text-secondary m-auto">Six: 70 . Four: 85</p>
+                            <button class="btn bg-info" onclick="addToPlayerArray(this)" type="submit">SELECT</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-3 bg-dark border border-secondary border-2 mb-5">
+                    <h5
+                        class="fw-bold text-dark border border-top-0 border-dark border-1 rounded-bottom bg-warning p-2 me-2">
+                        Selected Best <span class="text-info fs-4 ">  Five :</span>
+                    </h5>
+
+                    <div class=" text-base-100 me-2">
+                        <table class="table table-dark">
+                            <!-- head -->
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Name</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="player-list">
+                                <!-- row 1 -->
+                                <!-- <tr>
+                                    <th>1</th>
+                                    <td>Sakib Al Hasan</td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+
+                <div class="col-3">
+                    <div class="card  bg-dark border border-secondary">
+                        <img src="Images/sabbir.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title  text-light m-auto">Sabbir Rahman</h5>
+                            <p class="card-text text-secondary m-auto">Six: 60 . Four: 55</p>
+                            <button class="btn bg-info" onclick="addToPlayerArray(this)" type="submit">SELECT</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card bg-dark border border-secondary">
+                        <img src="Images/soumya.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title  text-light m-auto">Soumya Sarker</h5>
+                            <p class="card-text text-secondary m-auto">Six: 30 . Four: 85</p>
+                            <button class="btn bg-info" onclick="addToPlayerArray(this)" type="submit">SELECT</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card bg-dark border border-secondary">
+                        <img src="Images/mehedi.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title  text-light m-auto">Mehedi Miraz</h5>
+                            <p class="card-text text-secondary m-auto">Six: 45 . Four: 55</p>
+                            <button  class="btn bg-info" onclick="addToPlayerArray(this)" type="submit">SELECT</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <section class="col-3 bg-dark border border-secondary border-2 mb-2">
+                    <h5
+                        class="fw-bold text-dark border border-top-0 border-dark border-1 rounded-bottom bg-warning p-2 mb-3 me-2">
+                        Your Budget:
+                    </h5>
+                    <span class="text-light fs-5">Per Player : </span>
+                    <input id="perPlayerBudget-field"
+                        class=" text-light mb-2 fs-4 border border-1 border-light bg-dark me-2 px-2 float-end"
+                        style=" width: 50%;;" type="text">
+                    <button id="btn-calculate"
+                        class="mb-2 text-light bg-info px-4 py-1 border border-1 border-info fw-semibold fs-5 me-2"
+                        style=" width: 97%;" type="submit">Calculate</button>
+                    <br>
+                    <span class=" text-warning mb-2 fs-5 fw-bold"> Expenses : </span>
+                    <input id="expenses-field"
+                        class=" text-warning fs-3 mb-2 fw-bold border border-0 border-light bg-dark px-2 me-2 float-end"
+                        style=" width: 50%;" type="text">
+                    <br>
+                    <br>
+                    <span class=" text-light mb-4 fs-5">Manager : </span>
+                    <input id="manager-field"
+                        class=" text-light fs-4 mb-2  border border-1 border-light bg-dark me-2 px-2 float-end"
+                        style=" width: 50%;" type="text">
+                    <br>
+                    <br>
+                    <span class="text-light fs-5">Coach : </span>
+                    <input id="coach-field"
+                        class=" text-light mb-2 fs-4  border border-1 border-light bg-dark me-2 px-2 float-end"
+                        style=" width: 50%;" type="text">
+                    <br>
+                    <button id="btn-calculateTotal"
+                        class=" mb-2 text-light bg-info px-4 py-1 border border-1 border-info fw-semibold fs-5"
+                        style=" width: 97%;" type="submit">Total</button>
+                    <br>
+                    <span class=" text-warning mb-2 fs-4 fw-bold">Total : </span>
+                    <input id="total-field"
+                        class=" text-warning mb-2 fs-3 fw-bold border border-0 border-light bg-dark px-2 me-2 float-end"
+                        style=" width: 50%;" type="text">
+
+
+                </section>
+            </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <script src="js/player.js"></script>
+    <script src="js/budget.js"></script>
+</body>
+
+</html>
